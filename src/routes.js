@@ -6,7 +6,7 @@ import {isAuthenticated} from './services/auth';
 
 // Pages
 import Login from './pages/login';
-import Main from './pages/main';
+import Home from './pages/home';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -26,7 +26,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Login} />
-      <PrivateRoute path="/main" component={Main} />
+      <PrivateRoute path="/home" component={Home} />
       <Route path="*" component={() => <h1>404 Página não Encontrada</h1>} />
     </Switch>
   </BrowserRouter>

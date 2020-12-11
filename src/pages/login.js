@@ -22,10 +22,10 @@ function Login(props) {
     const { token } = getQueryParams();
 
     if (isAuthenticated()) {
-      props.history.push("/main");
+      props.history.push("/home");
     } else if (token !== undefined) {
       localStorage.setItem("token", token);
-      props.history.push("/main");
+      props.history.push("/home");
     }
   };
 
