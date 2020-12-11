@@ -1,20 +1,28 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
+import React, { Component } from "react"
 
-const authorizeUrl = 'https://github.com/login/oauth/authorize'
-const clientId = '90c663150f8be97ea2aa'
-const scope = 'user'
+// Material-ui Components
+import Container from "@material-ui/core/Container"
 
-function login () {
-    return(
-        <div>
-            <h1>Logar</h1>
-            <Button
-                href={`${authorizeUrl}?client_id=${clientId}&scope=${scope}`}>
-                Login with GitHub
-            </Button>
-        </div>
+// Custom Components
+import { LoginContainer, Typography, LoginScreen } from '../styles'
+import LoginButton from "../components/loginButton"
+
+class Login extends Component {
+  render() {
+    return (
+        <LoginScreen>
+            <Container style={{height: '100%'}}>
+            <LoginContainer>
+            <Typography variant="h1">Red Planet</Typography>
+            <Typography variant="h5" gutterBottom>
+            Um vislumbre do próximo passo da humanidade.
+            </Typography>
+            <LoginButton />
+            </LoginContainer>
+            </Container>
+        </LoginScreen>
     )
-};
+  }
+}
 
-export default login;
+export default Login
