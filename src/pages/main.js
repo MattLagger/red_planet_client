@@ -1,9 +1,9 @@
 import React from 'react';
 
-function main () {
+function Main () {
     return(
         <h1>Logado</h1>
     )
 }
 
-export default main;
+export default Main;
