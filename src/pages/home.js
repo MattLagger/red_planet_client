@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Page from '../components/page';
-import RoverCard from '../components/roverCard';
 import RoversList from '../components/roversList';
 import NasaServices from '../services/nasa';
 
@@ -13,9 +12,8 @@ function Home () {
     }, []);
 
     async function getRovers() {
-        const {success, data} = await NasaServices.listRovers();
-        // console.log(success, data);
-        setState(data);
+        const rovers = await NasaServices.listRovers();
+        setState(rovers)
     }
 
     return(
