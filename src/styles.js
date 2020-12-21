@@ -3,8 +3,13 @@ import styled from 'styled-components'
 // Material-ui buttons
 import MUITypography from "@material-ui/core/Typography"
 import MUIButton from '@material-ui/core/Button'
+import MUIContainer from '@material-ui/core/Container';
 
 import background from './assets/mars_surface.jpg';
+
+export const MainContainer = styled(MUIContainer)`
+    margin-top: 50px;
+`;
 
 export const LoginScreen = styled.div`
     background:

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // Services
-import { isAuthenticated } from "../services/auth";
+import Auth from "../services/auth";
 
 // Utils
 import { getQueryParams } from "../utils";
@@ -21,11 +21,11 @@ function Login(props) {
   const checkLogin = () => {
     const { token } = getQueryParams();
 
-    if (isAuthenticated()) {
-      props.history.push("/main");
+    if (Auth.isAuthenticated()) {
+      props.history.push("/home");
     } else if (token !== undefined) {
       localStorage.setItem("token", token);
-      props.history.push("/main");
+      props.history.push("/home");
     }
   };
 
