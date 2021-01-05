@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Page from '../components/page';
+
+// Components
 import RoversList from '../components/roversList';
+import Page from '../components/page';
+
+// Services
 import NasaServices from '../services/nasa';
 
 

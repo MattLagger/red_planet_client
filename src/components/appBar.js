@@ -23,7 +23,7 @@ function AppBar(props) {
     }
 
     return (
-        <MUIAppBar position="static">
+        <MUIAppBar style={{backgroundColor: '#96281b'}} position="static">
         <Toolbar>
           <Typography variant="h6">
             <Link style={{textDecoration: 'none', color: 'white'}} to="home">RedPlanet</Link>

@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import MUITypography from "@material-ui/core/Typography"
 import MUIButton from '@material-ui/core/Button'
 import MUIContainer from '@material-ui/core/Container';
+import MUICard from '@material-ui/core/Card';
+import MUICardMedia from '@material-ui/core/CardMedia';
 
 import background from './assets/mars_surface.jpg';
 
@@ -47,4 +49,13 @@ export const Button = styled(MUIButton)`
         background-color: whitesmoke !important;
         transition: ease-in-out .3s;
     }
+`;
+
+export const Card = styled(MUICard)`
+    width: 100%;
+`;
+
+export const CardMedia = styled(MUICardMedia)`
+    height: 0;
+    padding-top: 56.25%; 
 `;
