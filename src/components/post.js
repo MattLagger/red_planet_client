@@ -37,10 +37,11 @@ function Post({ data }) {
         setSeverity("error");
         if (err.response.status === 422) {
           setMessage(err.response.data.image_id[0]);
+        } else {
+          setMessage(
+            "Falha de conexão com servidor, tente novamente mais tarde."
+          );
         }
-        setMessage(
-          "Falha de conexão com servidor, tente novamente mais tarde."
-        );
       });
   }
 
@@ -62,7 +63,7 @@ function Post({ data }) {
       />
       <CardMedia image={data.img_src} />
       <Snackbar
-        open={message != null}
+        open={message != ''}
         autoHideDuration={6000}
         onClose={() => clearAlert()}
       >
