@@ -8,6 +8,7 @@ import Auth from './services/auth';
 import Login from './pages/login';
 import Home from './pages/home';
 import Rovers from './pages/rovers';
+import Favorites from './pages/favorites';
 
 import AppBar from './components/appBar';
 
@@ -32,6 +33,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={Login} />
       <PrivateRoute path="/home" component={Home} />
+      <PrivateRoute path="/favorites" component={Favorites} />
       <PrivateRoute path="/rovers/:rover_name" component={Rovers} />
       <Route path="*" component={() => <h1>404 Página não Encontrada</h1>} />
     </Switch>
