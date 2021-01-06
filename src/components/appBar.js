@@ -52,8 +52,7 @@ function AppBar(props) {
                 open={open}
                 onClose={() => setOpen(false)}
               >
-                <MenuItem onClick={() => setOpen(false)}>Profile</MenuItem>
-                <MenuItem onClick={() => setOpen(false)}>Favoritos</MenuItem>
+                <MenuItem onClick={() => props.history.push('/favorites')}>Favoritos</MenuItem>
                 <MenuItem onClick={() => logout()}>Logout</MenuItem>
               </Menu>
             </div>
