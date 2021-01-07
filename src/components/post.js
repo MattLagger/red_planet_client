@@ -63,7 +63,7 @@ function Post({ data }) {
       />
       <CardMedia image={data.img_src} />
       <Snackbar
-        open={message != ''}
+        open={message !== ''}
         autoHideDuration={6000}
         onClose={() => clearAlert()}
       >
