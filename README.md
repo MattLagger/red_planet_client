@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Client Red Planet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado com react
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+Scripts disponíveis
 
-### `yarn start`
+### `yarn start` ou `npm run start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Executa o app em modo dev
+Abra [http://localhost:3001](http://localhost:3001) e visualize no browser.\
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn build` ou `npm run build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Gera o aplicativo para produção na pasta `build`.\
+Também otimiza o projeto.
 
-### `yarn build`
+Minificando e gerando hashes.\
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Porta 3001
+A porta 3001 pode ser alterada no script start do `package.json`
+## Autenticação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A autenticação é realizada via github-oauth e jwt pela api em ruby on rails.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Bibliotecas Utilizadas
 
-### `yarn eject`
+No projeto foram utilizadas algumas bibliotecas de terceiros.\
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. momentjs: para manipulação de datas e formatação.
+2. material-ui/core: framework frontend com base no google material.
+3. material-ui/icons: pacote de icones do google material.
+4. material-ui/lab: conteudos beta do google material.
+5. axios: biblioteca para chamadas http.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Arquivos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`App.js` Arquivo principal da aplicação.\
+`routes.js` Responsável pelo controle de todas as rotas do projeto.\
+`./pages` Onde se localiza todas as páginas usadas nas rotas.\
+`./components` Componentes menores e reutilizavéis.\
+`./services` Serviços que requerem utilização da api.\
+`./assets` Imagens e outros tipos de arquivos utilizados.\
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Páginas
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`/login` Tela principal do projeto com login via github .\
+`/home` Lista todas as sondas em marte e seus status atualmente.\
+`/favorites` Exibe todos as imagens de sondas favoritadas, assim como permite excluir as salvas.\
+`/rovers/:nome_do_rover` Lista todas as fotos daquele rover no periodo selecionado, mas permite também favoritas algumas.\
